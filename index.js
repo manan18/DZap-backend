@@ -5,7 +5,7 @@ import currencyRouter from "./routes/currency.route.js";
 
 dotenv.config({});
 
-const PORT = process.env.PORT || 8000;
+const PORT = 3000;
 const app = express();
 
 app.use(express.json());
@@ -20,3 +20,5 @@ app.get("/healthcheck", (req, res) => {
 app.listen(PORT, () => {
   console.log("Server Running on Port :", PORT);
 });
+
+module.exports = app;
